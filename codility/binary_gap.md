@@ -15,8 +15,7 @@ def solution(N):
     
     max = 0
     for i in range(1, len(index)):
-        gap = index[i] - index[i-1] -1
-        max = gap if gap > max else max
+        max = max(index[i] - index[i-1] -1, max)
 
     return max
 ```
